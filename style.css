@@ -1,7 +1,69 @@
-/*header {*/
-/*  padding: 60px;*/
-/*  text-align: center;*/
-/*  background-color: blue;*/
-/*  color: red;*/
-/*  font-size: 30px;*/
-/*}*/
+/* 1+ css3 background or border property[ies]*/
+/* 1+ gradient (linear and/or radial)*/
+/* 1+ shadow (box or text)*/
+/* 1+ transform (2D or 3D)*/
+/*1+ transition*/
+/* 1+ animation*/
+
+
+header {
+  padding: 60px;
+  text-align: center;
+  background-color: blue;
+  color: yellow;
+  font-size: 30px;
+  text-shadow: 0 0 20px red;
+  padding: 10px 0px;
+  border-style: double;
+  border-width: 10px;
+  border-color: red;
+  background-image: radial-gradient(red, yellow, green);
+
+}
+
+h1:hover {
+    animation-name: spin;
+    animation-duration: 3s;
+}
+@keyframes spin {
+  100% {transform: rotate(360deg);}
+}
+
+.person {
+    /*transform: rotateY(180deg);*/
+    margin: -220px 0px 0px 100px;
+    float: left; /*makes it stay in one place*/
+}
+
+.person:hover {
+    animation-name: throw;
+    animation-duration: 4s;
+    transition: transform 3s;
+}
+
+@keyframes throw {
+  0%   {transform: rotateZ(0deg);}
+  25%  {transform: rotateZ(60deg);}
+  50%  {transform: rotateZ(60deg);}
+  100% {transform: rotateZ(0deg);}
+}
+
+.boomerang {
+    margin: 150px 400px 40px -20px;
+    /*float: left;*/
+    /*animation-name: throw;*/
+    /*animation-duration: 6s;*/
+}
+
+.boomerang:hover {
+    animation-name: throw;
+    animation-duration: 4s;
+    /*transition: transform 4s;*/
+}
+
+@keyframes move {
+  0%   {transform: rotate(0deg); right:0px; top:0px;}
+  25%  {transform: rotate(900deg); right:100px; top:10px;}
+  50%  {transform: rotate(180deg); right:100px; top:-10px;}
+  100% {transform: rotate(360deg); right:0px; top:0px;}
+}
