@@ -31,11 +31,11 @@ h1:hover {
 
 .person {
     /*transform: rotateY(180deg);*/
-    margin: -220px 0px 0px 100px;
+    margin: 70px 0px 0px 100px;
     float: left; /*makes it stay in one place*/
 }
 
-.person:hover {
+.person { /*will make it into hover another time*/
     animation-name: throw;
     animation-duration: 4s;
     transition: transform 3s;
@@ -49,21 +49,30 @@ h1:hover {
 }
 
 .boomerang {
-    margin: 150px 400px 40px -20px;
+    /*margin: 150px 400px 40px -20px;*/
+    position: absolute;
+    top: 350px;
+    /*height: ;*/
     /*float: left;*/
-    /*animation-name: throw;*/
+    /*animation-name: move;*/
     /*animation-duration: 6s;*/
 }
 
-.boomerang:hover {
-    animation-name: throw;
+.boomerang { /*was goint to be used for hover but ran into issues*/
+    animation-name: move;
     animation-duration: 4s;
-    /*transition: transform 4s;*/
+    transition: transform 4s; /*make boomerang move more smoothly*/
 }
 
-@keyframes move {
-  0%   {transform: rotate(0deg); right:0px; top:0px;}
-  25%  {transform: rotate(900deg); right:100px; top:10px;}
-  50%  {transform: rotate(180deg); right:100px; top:-10px;}
-  100% {transform: rotate(360deg); right:0px; top:0px;}
+@keyframes move {/*how it is thrown*/
+  0%   {transform: rotate(1080deg); left:0px; top:350px;}
+  25%  {transform: rotate(2160deg); left:80%; top:300px;}
+  50%  {transform: rotate(1080deg); left:80%; top:360px;}
+  /*75%  {transform: rotate(2160deg); left:100px; top:350px;}*/
+  100% {transform: rotate(3240deg); left:0px; top:350px;}
+  /*0%   {left:0px; top:0px;}*/
+  /*25%  {left:200px; top:-50px;}*/
+  /*50%  {left:200px; top:10px;}*/
+  /*75%  {left:100px; top:0px;}*/
+  /*100% {left:0px; top:0px;}*/
 }
